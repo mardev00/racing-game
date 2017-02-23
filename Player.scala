@@ -20,7 +20,7 @@ class Player(n:String, t:String) extends Actor {
   override def receive: Receive = {
     
     case s:String => println(s)   
-    case Player.Play() => {Thread.sleep(scala.util.Random.nextInt(100));  pos +=1; print(" " + token); if(pos==10) gameEngine ! RacingGame.DeclareWinner(this)}
+    case Player.Play() => {Thread.sleep(scala.util.Random.nextInt(5));  pos +=1; print(" " + token); if(pos==20) gameEngine ! RacingGame.DeclareWinner(this)}
   }
   
 }
