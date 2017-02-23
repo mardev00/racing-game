@@ -11,7 +11,6 @@ object RacingApp extends App {
   
   
   val gameEngine:ActorRef = system.actorOf(RacingGame.props, "racing-game")
-  gameEngine ! "test"
   while(true) {
     p1 ! Player.Play()
     p2 ! Player.Play()

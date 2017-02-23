@@ -14,7 +14,7 @@ class RacingGame extends Actor {
   
   override def receive: Receive = {  
     case RacingGame.StartGame => drawBoard
-    case RacingGame.DeclareWinner(p) => { println("WINNER IS: " + p.name); System.exit(0) }
+    case RacingGame.DeclareWinner(p) => { println("\nWINNER IS: " + p.name); System.exit(0) }
   }
   
   def drawBoard() {
