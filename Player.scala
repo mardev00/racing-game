@@ -6,12 +6,7 @@ import akka._
 object Player {
     def p1 = Props(new Player("p1", "p1"))
     def p2 = Props(new Player("p2", "p2"))
-    /**
-     * val start = 20
-val end   = 30
-val rnd = new scala.util.Random
-start + rnd.nextInt( (end - start) + 1 ) 
-     */
+   
     case class Play()
 }
 
